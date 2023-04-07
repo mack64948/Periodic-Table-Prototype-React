@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { PTable } from "./components/PTable";
+import { SeriesLegend } from "./components/SeriesLegend";
+import { Header } from "./components/Header";
 
 function App() {
+  let colorSchemeDict = {
+    "alkali-metals": "green",
+    "alkaline-earth-metals": "lightgreen",
+    "transition-metals": "yellow",
+    "post-transition-metals": "coral",
+    "actinoids": "red",
+    "landthaoids": "orange",
+    "reactive-nonmetals": "teal",
+    "metalloids": "seagreen",
+    "noble-gases":"pink"
+
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header></Header>
+        <PTable 
+          colorSchemeDict={colorSchemeDict}
+          legendChild={
+            <SeriesLegend 
+            colorSchemeDict={colorSchemeDict}
+            width="90%" 
+            height="90%"></SeriesLegend>} 
+          tableWidth="1000px"
+          tableHeight="500px"
+          ></PTable>
     </div>
   );
 }

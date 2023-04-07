@@ -1,0 +1,119 @@
+
+:root{
+    --label-border-radius: 10px;
+    --bg-alkali-metals: goldenrod;
+    --bg-alkaline-earth-metals: gold;
+    --bg-lanthanoids: brown;
+    --bg-actinoids: plum;
+    --bg-transition-metals: coral;
+    --bg-post-transition-metals: lightblue;
+    --bg-metalloids: teal;
+    --bg-reactive-nonmetals: seagreen;
+    --bg-noble-gases: purple;
+ 
+
+}
+
+span{
+    background-color: inherit;
+    position: absolute; 
+    font-size: 14px;
+}
+
+.center-text-horizontal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotate-90-clockwise{
+    transform: rotate(90deg);
+}
+.rounded-top-corners{
+    border-top-right-radius: var(--label-border-radius);
+    border-top-left-radius: var(--label-border-radius);
+    border: thin solid black;
+    border-bottom-color: transparent;
+}
+
+.legend-table{
+
+    display: grid;
+    grid-template: 1fr 2fr 2fr / 1fr 1.5fr 3fr 1fr 1fr 1fr 1.5fr 1fr;
+    gap: 2px;
+}
+
+.label-metals{
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+
+    
+}
+
+.label-nonmetals{
+    grid-column: 7 / -1;
+    grid-row: 1 / 2;
+}
+
+
+.col-alkali-metals{
+    background-color: var(--bg-alkali-metals);
+    grid-row: 2 / -1;
+    grid-column: 1 / 2;
+    color: black;
+
+}
+.col-alkaline-earth-metals{
+    background-color: var(--bg-alkaline-earth-metals);
+    color: black;
+    grid-row: 2 / -1;
+    grid-column: 2 / 3;
+}
+
+.col-lanthanoids{
+    background-color: var(--bg-lanthanoids);
+    grid-row: 2 / 3;
+    grid-column: 3 /4;
+    color: white;
+}
+
+.col-actinoids{
+    color: white;
+    background-color: var(--bg-actinoids);
+    grid-row: 3 / -1;
+    grid-column: 3 /4;
+}
+
+.col-transition-metals{
+    background-color: var(--bg-transition-metals);
+    grid-column: 4 / 5;
+    grid-row: 2 / -1;
+}
+
+.col-post-transition-metals{
+    background-color: var(--bg-post-transition-metals);
+    grid-column: 5 / 6;
+    grid-row: 2 / -1;
+}
+
+.col-metalloids{
+    background-color: var(--bg-metalloids);
+    grid-column: 6 / 7;
+    grid-row: 1 / -1;
+    color: white;
+}
+
+.col-reactive-nonmetals{
+    background-color: var(--bg-reactive-nonmetals);
+    grid-row: 2 / -1;
+    grid-column: 7 / 8;
+    color: white;
+}
+
+.col-noble-gases{
+    background-color: var(--bg-noble-gases);
+    grid-row: 2 / -1;
+    grid-column: 8 / 9;
+    color: white;
+}
+
